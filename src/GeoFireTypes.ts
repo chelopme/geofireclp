@@ -16,6 +16,7 @@ export namespace GeoFireTypes {
     location: number[];
     distanceFromCenter: number;
     isInQuery: boolean;
+    meta: object;
     geohash: string;
   }
   export type ReadyCallback = () => void;
