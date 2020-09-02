@@ -316,9 +316,9 @@ export class GeoQuery {
   private _fireCallbacksForKey(eventType: string, key: string, meta: object, location?: number[], distanceFromCenter?: number): void {
     this._callbacks[eventType].forEach((callback) => {
       if (typeof location === 'undefined' || location === null) {
-        callback(key, null, null, meta);
+        callback(key, meta, null, null);
       } else {
-        callback(key, location, distanceFromCenter, meta);
+        callback(key, meta, location, distanceFromCenter);
       }
     });
   }
